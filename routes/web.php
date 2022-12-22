@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login-telutizen', [
+        'title' => 'Login'
+    ]);
 });
+
+Route::get('/login-ukm', function () {
+    return view('login-ukm', [
+        'title' => 'Login'
+    ]);
+});
+
