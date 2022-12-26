@@ -15,13 +15,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('login-telutizen', [
-        'title' => 'Login'
+        'title' => 'Login Telutizen'
+    ]);
+});
+
+Route::get('/home', function () {
+    return view('home', [
+        'title' => 'Home'
     ]);
 });
 
 Route::get('/login-ukm', function () {
     return view('login-ukm', [
-        'title' => 'Login'
+        'title' => 'Login UKM'
+    ]);
+});
+
+Route::get('/about', function () {
+    return view('about-us', [
+        'title' => 'About Us'
     ]);
 });
 

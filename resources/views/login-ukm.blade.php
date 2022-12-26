@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.login')
 
 @section('container')
 <div class="container">
@@ -11,7 +11,7 @@
       <div class="card" style="width: 25rem;">
         <div class="card-body">
           <h1 class="card-title text-center">Login</h1>
-          <p class="card-title text-center">as Telutizen</p>
+          <p class="card-title text-center text-danger">as UKM</p>
           <form action="home.html" method="POST">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email SSO</label>
@@ -31,7 +31,7 @@
             <a class="text-danger text-decoration-none" href="">Lupa Password?</a>
             <br><br>
             <div class="text-center">
-              Login sebagai UKM? <a class="text-danger text-decoration-none" href="/login-ukm">Login</a>
+              Login sebagai Telutizen? <a class="text-danger text-decoration-none" href="/login-telutizen">Login</a>
             </div>
           </form>
         </div>

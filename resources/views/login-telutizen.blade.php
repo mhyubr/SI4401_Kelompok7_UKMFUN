@@ -31,7 +31,7 @@
             <a class="text-danger text-decoration-none" href="">Lupa Password?</a>
             <br><br>
             <div class="text-center">
-              Login sebagai UKM? <a class="text-danger text-decoration-none" href="login-ukm.html">Login</a>
+              Login sebagai UKM? <a class="text-danger text-decoration-none" href="/login-ukm">Login</a>
             </div>
           </form>
         </div>
