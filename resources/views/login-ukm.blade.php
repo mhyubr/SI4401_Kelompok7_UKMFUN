@@ -12,7 +12,7 @@
         <div class="card-body">
           <h1 class="card-title text-center">Login</h1>
           <p class="card-title text-center text-danger">as UKM</p>
-          <form action="home.html" method="POST">
+          <form action="/home" method="GET">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email SSO</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -31,7 +31,7 @@
             <a class="text-danger text-decoration-none" href="">Lupa Password?</a>
             <br><br>
             <div class="text-center">
-              Login sebagai Telutizen? <a class="text-danger text-decoration-none" href="/login-telutizen">Login</a>
+              Login sebagai Telutizen? <a class="text-danger text-decoration-none" href="/">Login</a>
             </div>
           </form>
         </div>

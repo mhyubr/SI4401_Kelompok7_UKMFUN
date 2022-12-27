@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ukms', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned()->autoIncrement();
+            $table->string('nama', 255);
+            $table->string('email', 255)->unique();
+            $table->string('password', 255);
+            $table->rememberToken();
             $table->timestamps();
         });
     }

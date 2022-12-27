@@ -7,7 +7,7 @@
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="card" style="margin-top: 200px; height: 40rem; width: 75rem;">
+                <div class="card mb-5" style="margin-top: 230px; height: 40rem; width: 75rem;">
                     <div class="card-body">
                         <div class="row justify-content-center pt-5" style="text-align: justify;">
                             <div class="col-sm-9 text-center">

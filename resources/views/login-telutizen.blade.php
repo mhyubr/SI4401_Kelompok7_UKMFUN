@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.login')
 
 @section('container')
 <div class="container">
@@ -12,7 +12,7 @@
         <div class="card-body">
           <h1 class="card-title text-center">Login</h1>
           <p class="card-title text-center">as Telutizen</p>
-          <form action="home.html" method="POST">
+          <form action="/home" method="POST">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email SSO</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
