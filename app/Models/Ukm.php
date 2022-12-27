@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Ukm extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'nama',
+        'email',
+        'password',
+    ];
+
+    
+    protected $hidden = [
+        'password',
+    ];
 }
