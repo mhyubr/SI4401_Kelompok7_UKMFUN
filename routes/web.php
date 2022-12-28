@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +24,7 @@ Route::get('/home', function () {
     return view('home', [
         'title' => 'Home'
     ]);
-});
+})->middleware('auth');
 
 Route::get('/login-ukm', function () {
     return view('login-ukm', [
@@ -37,3 +38,6 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [UserController::class, 'authenticate'])->middleware('guest');
+Route::post('/logout', [UserController::class, 'logout']);

@@ -11,15 +11,21 @@
       <div class="card" style="width: 25rem;">
         <div class="card-body">
           <h1 class="card-title text-center">Login</h1>
-          <p class="card-title text-center">as Telutizen</p>
-          <form action="/home" method="POST">
+          <p class="card-title text-center text-danger">as Telutizen</p>
+          @if (session()->has('LoginGagal'))
+          <div class="alert alert-danger" role="alert">
+            {{ session('LoginGagal') }}
+          </div>
+          @endif
+          <form action="/login" method="POST">
+            @csrf
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email SSO</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="email" class="form-label">Email SSO</label>
+              <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" autofocus required>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+            <div class="mb-3">  
+              <label for="password" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" id="password" required>
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">

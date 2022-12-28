@@ -5,7 +5,7 @@
                 <img src="{{ asset('asset/img/tel-u-white.png') }}" height="70px" class="mt-3 ms-5" alt="" srcset="">
                 <p class="mt-2 ms-5">Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</p>
                 <div class="row">
-                    <p class="mt-5 ms-5 text-secondary">© Copyright 2021  |  Telkom University | Powered by UKM Fun</p>
+                    <p class="mt-5 ms-5 text-secondary">© Copyright 2022  |  Telkom University | Powered by UKM Fun</p>
                 </div>
             </div>
             <div class="col-sm-3">
