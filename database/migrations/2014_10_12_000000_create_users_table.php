@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('nama', 255);
             $table->string('email', 255)->unique();
             $table->string('password', 255);
+            $table->string('jurusan', 255);
+            $table->string('jenis_kelamin', 255);
             $table->rememberToken();
             $table->timestamps();
         });
