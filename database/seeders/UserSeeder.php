@@ -16,36 +16,54 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        // TELUTIZEN
         DB::table('users')->insert([
             'nama' => 'Muhammad Ayyub Ramli',
             'email' => 'ayyub@student.telkomuniversity.ac.id',
-            'password' => bcrypt('ayyub1234'),
-            // 'level' => 'mahasiswa',
+            'password' => bcrypt('1'),
+            'role' => 'mahasiswa',
             'remember_token' =>  Str::random(60)
         ]);
         
         DB::table('users')->insert([
             'nama' => 'Ivan Setiawan',
             'email' => 'ivan@student.telkomuniversity.ac.id',
-            'password' => bcrypt('ivan1234'),
-            // 'level' => 'mahasiswa',
-            'remember_token' =>  Str::random(60)
-        ]);
-    
-        DB::table('users')->insert([
-            'nama' => 'Ari Dwi Setyawan',
-            'email' => 'dwi@student.telkomuniversity.ac.id',
-            'password' => bcrypt('dwi1234'),
-            // 'level' => 'mahasiswa',
+            'password' => bcrypt('ivan'),
+            'role' => 'mahasiswa',
             'remember_token' =>  Str::random(60)
         ]);
         
-        // DB::table('users')->insert([
-        //     'nama' => 'Astacala',
-        //     'email' => 'astacala@ukm.telkomuniversity.ac.id',
-        //     'password' => bcrypt('astacala1234'),
-        //     'level' => 'ukm',
-        //     'remember_token' =>  Str::random(60)
-        // ]);
+        DB::table('users')->insert([
+            'nama' => 'Ari Dwi Setyawan',
+            'email' => 'dwi@student.telkomuniversity.ac.id',
+            'password' => bcrypt('dwi'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
+        
+        DB::table('users')->insert([
+            'nama' => 'ASTACALA',
+            'email' => 'astacala@ukm.telkomuniversity.ac.id',
+            'password' => bcrypt('1'),
+            'role' => 'ukm',
+            'remember_token' =>  Str::random(60)
+        ]);
+        
+        DB::table('users')->insert([
+            'nama' => 'KBMS',
+            'email' => 'kbms@ukm.telkomuniversity.ac.id',
+            'password' => bcrypt('kbms'),
+            'role' => 'ukm',
+            'remember_token' =>  Str::random(60)
+        ]);
+        
+        DB::table('users')->insert([
+            'nama' => 'IMABEST',
+            'email' => 'imabest@ukm.telkomuniversity.ac.id',
+            'password' => bcrypt('imabest'),
+            'role' => 'ukm',
+            'remember_token' =>  Str::random(60)
+        ]);
+
     }
 }

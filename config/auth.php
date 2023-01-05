@@ -46,10 +46,10 @@ return [
             'provider' => 'users',
         ],
 
-        'ukm' => [
-            'driver' => 'session',
-            'provider' => 'ukms',
-        ],
+        // 'ukm' => [
+        //     'driver' => 'session',
+        //     'provider' => 'ukms',
+        // ],
     ],
 
     /*
@@ -75,10 +75,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        'ukms' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Ukm::class,
-        ],
+        // 'ukms' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\Ukm::class,
+        // ],
     ],
 
     /*

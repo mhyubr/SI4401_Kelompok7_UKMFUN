@@ -6,17 +6,13 @@
         <div class="navbar-nav">
             <ul class="nav justify-content-end">
                 <li class="nav-item mx-2">
-                    <a class="nav-link {{ $title === 'Home' ? 'text-danger' : 'text-dark' }}" href="/home">HOME</a>
+                    <a class="nav-link {{ $title === auth()->user()->nama ? 'text-danger' : 'text-dark' }}" href="/home-ukm">{{ auth()->user()->nama }}</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link {{ $title === 'Event' ? 'text-danger' : 'text-dark' }}" href="/event">EVENT</a>
+                    <a class="nav-link {{ $title === 'Edit' ? 'text-danger' : 'text-dark' }}" href="/edit">EDIT</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link {{ $title === 'UKM' ? 'text-danger' : 'text-dark' }}" href="/ukm">UKM</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link {{ $title === 'About Us' ? 'text-danger' : 'text-dark' }}" href="/about">ABOUT
-                        US</a>
+                    <a class="nav-link {{ $title === 'UKM' ? 'text-danger' : 'text-dark' }}" href="/ukm">PENDAFTARAN</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link text-dark" href="#"><img class="me-3"
@@ -32,7 +28,7 @@
                                     <path
                                         d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                                 </svg> 
-                                {{-- {{ auth()->user()->nama }} --}}
+                                {{ auth()->user()->nama }}
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>

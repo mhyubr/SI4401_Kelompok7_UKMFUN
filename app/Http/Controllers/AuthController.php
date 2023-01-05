@@ -9,68 +9,41 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     // TELUTIZEN
-    public function index_telutizen()
+    public function index()
     {
-        return view('login-telutizen', [
-            'title' => 'Login Telutizen' 
+        return view('login-ukmfun', [
+            'title' => 'Login'
         ]);
     }
 
-    public function authenticate_telutizen(Request $request)
+    public function authenticate(Request $request)
     {
         // dd($request->all());
         $credentials = $request->validate([
-            'email' => 'required|email:dns',
+            'email' => 'required|email',
             'password' => 'required'
         ]);
-
-        if (Auth::guard('user')->attempt($credentials)) {
+        
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/home');
+            if (Auth::user()->role == 'ukm') {
+                return redirect()->intended('/home-ukm');
+            } elseif (Auth::user()->role == 'mahasiswa') {
+                return redirect()->intended('/home');
+            }
         }
-        return back()->with('LoginGagal', 'Username atau Password salah!');
-    }
 
-    // UKM
-    public function index_ukm()
-    {
-        return view('login-ukm', [
-            'title' => 'Login UKM'
-        ]);
-    }
-
-    public function authenticate_ukm(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => 'required|email:dns',
-            'password' => 'required'
-        ]);
-
-        if (Auth::guard('ukm')->attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/home');
-        }
         return back()->with('LoginGagal', 'Username atau Password salah!');
     }
 
     // LOGOUT
     public function logout(Request $request)
     {
-        if (Auth::guard('user')->check()){
-            
-            Auth::guard('user')->logout();
-            $request->session()->invalidate();
-            $request->session()->regenerateToken();
-            
-        } elseif (Auth::guard('ukm')->check()){
-            
-            Auth::guard('ukm')->logout();
-            $request->session()->invalidate();
-            $request->session()->regenerateToken();
 
-        }
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
         return redirect('/');
-
     }
 }
