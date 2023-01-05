@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Expr\FuncCall;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 
-class UserController extends Controller
+class UkmController extends Controller
 {
 
     public function index()
     {
-        return view('login-telutizen', [
-            'title' => 'Login Telutizen' 
+        return view('login-ukm', [
+            'title' => 'Login UKM'
         ]);
     }
 
