@@ -18,13 +18,12 @@ class UserController extends Controller
 
     public function authenticate(Request $request)
     {
-        // dd($request);
         $credentials = $request->validate([
             'email' => 'required|email:dns',
             'password' => 'required'
         ]);
 
-        if (Auth::guard('user')->attempt($credentials)) {
+        if (Auth::guard('ukm')->attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/home');
         }

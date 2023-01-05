@@ -14,7 +14,7 @@
           <p class="card-title text-center text-danger">as UKM</p>
           <form action="/home" method="GET">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email SSO</label>
+              <label for="exampleInputEmail1" class="form-label">Email UKM</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
@@ -28,7 +28,7 @@
             <div class="d-grid mb-3">
               <button type="submit" class="btn btn-danger" href="">Login</button>
             </div>
-            <a class="text-danger text-decoration-none" href="">Lupa Password?</a>
+            <a class="text-danger text-decoration-none" href="https://igracias.telkomuniversity.ac.id/">Lupa Password?</a>
             <br><br>
             <div class="text-center">
               Login sebagai Telutizen? <a class="text-danger text-decoration-none" href="/">Login</a>

@@ -34,7 +34,7 @@
             <div class="d-grid mb-3">
               <button type="submit" class="btn btn-danger" href="">Login</button>
             </div>
-            <a class="text-danger text-decoration-none" href="">Lupa Password?</a>
+            <a class="text-danger text-decoration-none" href="https://igracias.telkomuniversity.ac.id/">Lupa Password?</a>
             <br><br>
             <div class="text-center">
               Login sebagai UKM? <a class="text-danger text-decoration-none" href="/login-ukm">Login</a>

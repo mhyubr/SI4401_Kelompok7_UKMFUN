@@ -20,8 +20,7 @@ class UserSeeder extends Seeder
             'nama' => 'Muhammad Ayyub Ramli',
             'email' => 'ayyub@student.telkomuniversity.ac.id',
             'password' => bcrypt('ayyub1234'),
-            'jurusan' => 'S1 Sistem Informasi',
-            'jenis_kelamin' => 'Laki - laki',
+            // 'level' => 'mahasiswa',
             'remember_token' =>  Str::random(60)
         ]);
         
@@ -29,8 +28,7 @@ class UserSeeder extends Seeder
             'nama' => 'Ivan Setiawan',
             'email' => 'ivan@student.telkomuniversity.ac.id',
             'password' => bcrypt('ivan1234'),
-            'jurusan' => 'S1 Sistem Informasi',
-            'jenis_kelamin' => 'Laki - laki',
+            // 'level' => 'mahasiswa',
             'remember_token' =>  Str::random(60)
         ]);
     
@@ -38,9 +36,16 @@ class UserSeeder extends Seeder
             'nama' => 'Ari Dwi Setyawan',
             'email' => 'dwi@student.telkomuniversity.ac.id',
             'password' => bcrypt('dwi1234'),
-            'jurusan' => 'S1 Sistem Informasi',
-            'jenis_kelamin' => 'Laki - laki',
+            // 'level' => 'mahasiswa',
             'remember_token' =>  Str::random(60)
         ]);
+        
+        // DB::table('users')->insert([
+        //     'nama' => 'Astacala',
+        //     'email' => 'astacala@ukm.telkomuniversity.ac.id',
+        //     'password' => bcrypt('astacala1234'),
+        //     'level' => 'ukm',
+        //     'remember_token' =>  Str::random(60)
+        // ]);
     }
 }

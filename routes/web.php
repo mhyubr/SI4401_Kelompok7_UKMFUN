@@ -16,9 +16,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('login-telutizen', [
-        'title' => 'Login Telutizen'
+        'title' => 'Login'
     ]);
-});
+})->middleware('guest');
+
+Route::get('/login-ukm', function () {
+    return view('login-ukm', [
+        'title' => 'Login UKM'
+    ]);
+})->middleware('guest');
+
+Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [UserController::class, 'authenticate'])->middleware('guest');
+
+// TELUTIZEN
 
 Route::get('/home', function () {
     return view('home', [
@@ -26,18 +37,29 @@ Route::get('/home', function () {
     ]);
 })->middleware('auth');
 
-Route::get('/login-ukm', function () {
-    return view('login-ukm', [
-        'title' => 'Login UKM'
+Route::get('/ukm', function () {
+    return view('ukm', [
+        'title' => 'UKM'
     ]);
-});
+})->middleware('auth');
+
+Route::get('/event', function () {
+    return view('event', [
+        'title' => 'Event'
+    ]);
+})->middleware('auth');
 
 Route::get('/about', function () {
     return view('about-us', [
         'title' => 'About Us'
     ]);
-});
+})->middleware('auth');;
 
-Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [UserController::class, 'authenticate'])->middleware('guest');
 Route::post('/logout', [UserController::class, 'logout']);
+
+// UKM
+Route::get('/home-ukm', function () {
+    return view('home', [
+        'title' => 'Home'
+    ]);
+})->middleware('auth');
