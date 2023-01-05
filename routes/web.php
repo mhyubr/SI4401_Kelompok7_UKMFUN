@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UkmController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewController;
+use App\Http\Middleware\CekRole;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,62 +18,26 @@ use App\Http\Controllers\ViewController;
 |
 */
 
-// TELUTIZEN VIEW
-Route::get('/home', [ViewController::class, 'home'])->middleware('auth');
-Route::get('/ukm', [ViewController::class, 'home'])->middleware('auth');
-Route::get('/event', [ViewController::class, 'home'])->middleware('auth');
-Route::get('/about', [ViewController::class, 'home'])->middleware('auth');
-
-// Route::get('/', function () {
-//     return view('login-telutizen', [
-//         'title' => 'Login'
-//     ]);
-// })->middleware('guest');
-
-Route::get('/login-ukm', function () {
-    return view('login-ukm', [
-        'title' => 'Login UKM'
-    ]);
-})->middleware('guest');
-
 // LOGIN
-Route::get('/', [UserController::class, 'index'])->middleware('guest');
-Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [UserController::class, 'authenticate'])->middleware('guest');
-
-Route::get('/login-ukm', [UkmController::class, 'index'])->name('login-ukm')->middleware('guest');
-
-// TELUTIZEN
-
-Route::get('/home', function () {
-    return view('home', [
-        'title' => 'Home'
-    ]);
+route::group(['middleware' => ['guest']], function () {
+    Route::get('/', [AuthController::class, 'index_telutizen'])->name('/');
+    Route::post('/auth-telutizen', [AuthController::class, 'authenticate_telutizen']);
+    Route::get('/login-ukm', [AuthController::class, 'index_ukm'])->name('login-ukm');
+    Route::post('/auth-ukm', [AuthController::class, 'authenticate_ukm']);
+});
+route::group(['middleware' => ['auth:user,ukm', 'CekRole:mahasiswa,ukm']], function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 });
 
-Route::get('/ukm', function () {
-    return view('ukm', [
-        'title' => 'UKM'
-    ]);
+// TELUTIZEN VIEW
+route::group(['middleware' => ['auth:user', 'CekRole:mahasiswa']], function () {
+    Route::get('/home', [ViewController::class, 'home'])->name('home');
+    Route::get('/ukm', [ViewController::class, 'ukm']);
+    Route::get('/event', [ViewController::class, 'event']);
+    Route::get('/about', [ViewController::class, 'about']);
 });
 
-Route::get('/event', function () {
-    return view('event', [
-        'title' => 'Event'
-    ]);
+// UKM VIEW
+route::group(['middleware' => ['auth:ukm', 'CekRole:ukm']], function () {
+    Route::get('/home-ukm', [ViewController::class, 'home_ukm']);
 });
-
-Route::get('/about', function () {
-    return view('about-us', [
-        'title' => 'About Us'
-    ]);
-});
-
-Route::post('/logout', [UserController::class, 'logout']);
-
-// UKM
-Route::get('/home-ukm', function () {
-    return view('home', [
-        'title' => 'Home'
-    ]);
-})->middleware('auth');

@@ -12,27 +12,34 @@
                 <div class="card-body">
                     <h1 class="card-title text-center">Login</h1>
                     <p class="card-title text-center text-danger">as UKM</p>
-                    <form action="/home" method="GET">
+                    @if (session()->has('LoginGagal'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('LoginGagal') }}
+                        </div>
+                    @endif
+                    <form action="/login-ukm" method="POST">
+                        @csrf
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email UKM</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="email" class="form-label">Email SSO</label>
+                            <input type="email" name="email" class="form-control" id="email"
+                                aria-describedby="emailHelp" autofocus required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" id="password" required>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Ingat Saya</label>
                         </div>
                         <div class="d-grid mb-3">
-                            <button type="submit" class="btn btn-danger" href="">Login</button>
+                            <button type="submit" class="btn btn-danger">Login</button>
                         </div>
                         <a class="text-danger text-decoration-none" href="https://igracias.telkomuniversity.ac.id/">Lupa
                             Password?</a>
                         <br><br>
                         <div class="text-center">
-                            Login sebagai Telutizen? <a class="text-danger text-decoration-none" href="/">Login</a>
+                            Login sebagai Telutizen? <a class="text-danger text-decoration-none" href="/login-telutizen">Login</a>
                         </div>
                     </form>
                 </div>

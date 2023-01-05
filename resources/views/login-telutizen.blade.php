@@ -17,7 +17,7 @@
                             {{ session('LoginGagal') }}
                         </div>
                     @endif
-                    <form action="/login" method="POST">
+                    <form action="/auth-telutizen" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="email" class="form-label">Email SSO</label>
@@ -33,7 +33,7 @@
                             <label class="form-check-label" for="exampleCheck1">Ingat Saya</label>
                         </div>
                         <div class="d-grid mb-3">
-                            <button type="submit" class="btn btn-danger" href="">Login</button>
+                            <button type="submit" class="btn btn-danger">Login</button>
                         </div>
                         <a class="text-danger text-decoration-none" href="https://igracias.telkomuniversity.ac.id/">Lupa
                             Password?</a>
@@ -41,9 +41,9 @@
                         <div class="text-center">
                             Login sebagai UKM? <a class="text-danger text-decoration-none" href="/login-ukm">Login</a>
                         </div>
+                    </form>
                 </div>
             </div>
-            </form>
         </div>
     </div>
 @endsection
