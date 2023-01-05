@@ -11,7 +11,6 @@
       <div class="card" style="width: 25rem;">
         <div class="card-body">
           <h1 class="card-title text-center">Login</h1>
-          <p class="card-title text-center text-danger">as Telutizen</p>
           @if (session()->has('LoginGagal'))
           <div class="alert alert-danger" role="alert">
             {{ session('LoginGagal') }}
@@ -36,8 +35,6 @@
             </div>
             <a class="text-danger text-decoration-none" href="https://igracias.telkomuniversity.ac.id/">Lupa Password?</a>
             <br><br>
-            <div class="text-center">
-              Login sebagai UKM? <a class="text-danger text-decoration-none" href="/login-ukm">Login</a>
             </div>
           </form>
         </div>
