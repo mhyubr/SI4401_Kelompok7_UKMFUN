@@ -35,25 +35,25 @@ Route::get('/home', function () {
     return view('home', [
         'title' => 'Home'
     ]);
-})->middleware('auth');
+});
 
 Route::get('/ukm', function () {
     return view('ukm', [
         'title' => 'UKM'
     ]);
-})->middleware('auth');
+});
 
 Route::get('/event', function () {
     return view('event', [
         'title' => 'Event'
     ]);
-})->middleware('auth');
+});
 
 Route::get('/about', function () {
     return view('about-us', [
         'title' => 'About Us'
     ]);
-})->middleware('auth');;
+});
 
 Route::post('/logout', [UserController::class, 'logout']);
 
