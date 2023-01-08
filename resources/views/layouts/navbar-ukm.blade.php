@@ -12,7 +12,7 @@
                     <a class="nav-link {{ $title === 'Edit' ? 'text-danger' : 'text-dark' }}" href="/edit">EDIT</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link {{ $title === 'UKM' ? 'text-danger' : 'text-dark' }}" href="/ukm">PENDAFTARAN</a>
+                    <a class="nav-link {{ $title === 'Pendaftaran' ? 'text-danger' : 'text-dark' }}" href="/pendaftaran">PENDAFTARAN</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link text-dark" href="#"><img class="me-3"

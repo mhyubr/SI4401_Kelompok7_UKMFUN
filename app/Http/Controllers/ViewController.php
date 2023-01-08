@@ -44,4 +44,10 @@ class ViewController extends Controller
             'title' => 'Edit'
         ]);
     }
+
+    public function daftar_ukm() {
+        return view('ukm.daftar-ukm', [
+            'title' => 'Pendaftaran'
+        ]);
+    }
 }

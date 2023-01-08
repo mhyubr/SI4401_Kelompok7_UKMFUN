@@ -14,7 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('contents', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_content')->unsigned()->autoIncrement();
+            $table->string('nama_ukm', 255);
+            $table->string('logo', 255)->unique();
+            $table->string('jumbotron', 255);
+            $table->string('visi', 255);
+            $table->string('misi', 255);
+            $table->string('galeri', 255);
             $table->timestamps();
         });
     }
