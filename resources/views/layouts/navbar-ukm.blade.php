@@ -14,11 +14,11 @@
                 <li class="nav-item mx-2">
                     <a class="nav-link {{ $title === 'Pendaftaran' ? 'text-danger' : 'text-dark' }}" href="/pendaftaran">PENDAFTARAN</a>
                 </li>
-                <li class="nav-item mx-2">
+                {{-- <li class="nav-item mx-2">
                     <a class="nav-link text-dark" href="#"><img class="me-3"
                             src="{{ asset('asset/img/notifikasi.png') }}" alt="" height="20px"></a>
-                </li>
-                <div class="dropdown">
+                </li> --}}
+                <div class="dropdown ms-5">
                     <li class="nav-item ms-2 me-5">
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
@@ -31,7 +31,7 @@
                                 {{ auth()->user()->nama }}
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item text-danger" href="#"><strong>{{ auth()->user()->nama }}</strong></a></li>
                                 <form action="/logout" method="post">
                                     @csrf
                                     <li><button type="submit" class="dropdown-item">Logout</button></li>

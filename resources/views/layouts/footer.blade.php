@@ -11,13 +11,13 @@
             <div class="col-sm-3">
                 <p class="text-center mt-4">FOLLOW US</p>
                 <div class="text-center">
-                    <a class="mx-2" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="mx-2" href="https://www.facebook.com/telkomuniversity/" target="_blank" rel="noopener noreferrer">
                         <img src="{{ asset('asset/img/facebook.png') }}" alt="" srcset="">
                     </a>
-                    <a class="mx-2" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="mx-2" href="https://www.instagram.com/telkomuniversity/" target="_blank" rel="noopener noreferrer">
                         <img src="{{ asset('asset/img/instagram.png') }}" alt="" srcset="">
                     </a>
-                    <a class="mx-2"href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="mx-2"href="https://twitter.com/TelUniversity?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer">
                         <img src="{{ asset('asset/img/twitter.png') }}" alt="" srcset="">
                     </a>
                 </div>

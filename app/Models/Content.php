@@ -12,5 +12,14 @@ class Content extends Model
     protected $table = "contents";
     protected $primaryKey = "id_content";
 
-    
+    protected $fillable = [
+        'id_ukm',
+        'nama_ukm', 	
+        'deskripsi', 	
+        'logo', 	
+        'jumbotron', 	
+        'visi', 	
+        'misi', 	
+        'galeri'
+    ];
 }   

@@ -1,9 +1,9 @@
 @extends('layouts.main-ukm')
 
-@section('container')\
-<div class="container-fluid">
-    <br><br><br><br><br>
-    <h2 class="text-center">Status Pendaftar</h2>
+@section('container')
+    <div class="container-fluid">
+        <br><br><br><br><br>
+        {{-- <h2 class="text-center">Status Pendaftar</h2>
     <div class="row justify-content-center">
         <div class="col-sm-4">
             <div class="mt-3">
@@ -35,62 +35,66 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+        <!-- table -->
+        <br><br>
+        <h2 class="text-center">List Pendaftar</h2>
+        <br>
+        @if (session()->has('success'))
+            <div class="alert alert-success fs-5 text-center" role="alert">
+                {{ session('success') }}
+            </div>
+            @elseif (session()->has('failed'))
+            <div class="alert alert-danger fs-5 text-center" role="alert">
+                {{ session('failed') }}
+            </div>
+        @endif
+        <table class="table table-striped table-hover mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nama Lengkap</th>
+                    <th scope="col">NIM</th>
+                    <th scope="col">Jurusan</th>
+                    <th scope="col">Jenis Kelamin</th>
+                    <th scope="col">Alamat Lengkap</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">No. HP</th>
+                    <th scope="col">KSM</th>
+                    <th scope="col">KHS</th>
+                    <th scope="col">CV</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                @foreach ($pendaftaran as $daftar)
+                    <tr>
+                        <th scope="row">{{ $daftar->id_pendaftaran }}</th>
+                        <td>{{ $daftar->nama }}</td>
+                        <td>{{ $daftar->nim }}</td>
+                        <td>{{ $daftar->jurusan }}</td>
+                        <td>{{ $daftar->jk }}</td>
+                        <td>{{ $daftar->alamat }}</td>
+                        <td>{{ $daftar->email }}</td>
+                        <td>{{ $daftar->no_hp }}</td>
+                        <td><a class="text-decoration-none" target="blank" href="dokumen/{{ $daftar->ksm }}">{{ $daftar->ksm }}</a></td>
+                        <td><a class="text-decoration-none" target="blank" href="dokumen/{{ $daftar->khs }}">{{ $daftar->khs }}</a></td>
+                        <td><a class="text-decoration-none" target="blank" href="dokumen/{{ $daftar->cv }}">{{ $daftar->cv }}</a></td>
+                        <td class="text-success">
+                            @if ($daftar->status == 'Terima')
+                                Diterima
+                            @elseif ($daftar->status == 'Tolak')
+                                <span class="text-danger">Tolak</span>
+                            @else
+                                <a href="{{ url('terima/' . $daftar->id_pendaftaran) }}" class="btn btn-success">Terima</a>
+                                <p></p>
+                                <a href="{{ url('tolak/' . $daftar->id_pendaftaran) }}" class="btn btn-danger">Tolak</a>
+                            @endif
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <!-- table -->
     </div>
-    <!-- table -->
-    <br><br><br>
-    <h2 class="text-center">List Pendaftar</h2>
-    <table class="table table-striped table-hover mt-5">
-        <thead>
-            <tr>
-                <th scope="col">No.</th>
-                <th scope="col">Nama Lengkap</th>
-                <th scope="col">NIM</th>
-                <th scope="col">Jurusan</th>
-                <th scope="col">Jenis Kelamin</th>
-                <th scope="col">Alamat Lengkap</th>
-                <th scope="col">Email</th>
-                <th scope="col">No. HP</th>
-                <th scope="col">KSM</th>
-                <th scope="col">KHS</th>
-                <th scope="col">CV</th>
-                <th scope="col">Status</th>
-            </tr>
-        </thead>
-        <tbody class="table-group-divider">
-            <tr>
-                <th scope="row">1</th>
-                <td>Muhammad Ayyub Ramli</td>
-                <td>1202201296</td>
-                <td>S1 Sistem Informasi</td>
-                <td>Laki - laki</td>
-                <td>Komp. Perumahan Buah Batu Blok H No. 20</td>
-                <td>mhyubr@gmail.com</td>
-                <td>082304432424</td>
-                <td><a class="text-decoration-none" href="#">KSM_AYYUB.pdf</a></td>
-                <td><a class="text-decoration-none" href="#">KHS_AYYUB.pdf</a></td>
-                <td><a class="text-decoration-none" href="#">CV_AYYUB.pdf</a></td>
-                <td class="text-success">Diterima</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Ni Putu Putri Diah Utami</td>
-                <td>1202200062</td>
-                <td>S1 Sistem Informasi</td>
-                <td>Perempuan</td>
-                <td>Komp. Pesona Bali Blok A No. 22</td>
-                <td>didiahputri@gmail.com</td>
-                <td>081234567890</td>
-                <td><a class="text-decoration-none" href="#">KSM_DIAH.pdf</a></td>
-                <td><a class="text-decoration-none" href="#">KHS_DIAH.pdf</a></td>
-                <td><a class="text-decoration-none" href="#">CV_DIAH.pdf</a></td>
-                <td class="text-success">
-                    <buttton class="btn btn-success">Terima</buttton>
-                    <p></p>
-                    <buttton class="btn btn-danger">Tolak</buttton>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <!-- table -->
-</div>
 @endsection

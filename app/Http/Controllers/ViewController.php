@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class ViewController extends Controller
 {
     // TELUTIZEN VIEW
     public function home() {
-        return view('telutizen.home', [
-            'title' => 'Home'
-        ]);
+        return redirect()->route('index_telutizen');
     }
     
     public function ukm() {
@@ -25,18 +26,25 @@ class ViewController extends Controller
             'title' => 'Event'
         ]);
     }
-
+    
     public function about() {
+        // $pendaftaran = Pendaftaran::find(Auth::user()->id_user);
+        $pendaftaran = Pendaftaran::where('id_mahasiswa', Auth::user()->id_user)->get();
+        // $ukm = User::find($pendaftaran->id_ukm);
+        // $title = 'About Us';
+        if ($pendaftaran == null) {
+            $pendaftaran = [];
+        }
+        // dd($pendaftaran);
         return view('telutizen.about-us', [
-            'title' => 'About Us'
+            'title' => 'About Us',
+            'pendaftaran' => $pendaftaran
         ]);
     }
 
-    // UKM VIEW
+    // UKM VIEW 
     public function home_ukm() {
-        return view('ukm.home-ukm', [
-            'title' => Auth::user()->nama
-        ]);
+        return redirect()->route('index_ukm');
     }
 
     public function edit_ukm() {
@@ -46,8 +54,6 @@ class ViewController extends Controller
     }
 
     public function daftar_ukm() {
-        return view('ukm.daftar-ukm', [
-            'title' => 'Pendaftaran'
-        ]);
+        return redirect()->route('index-pendaftaran');
     }
 }
