@@ -91,7 +91,7 @@
                                 <a href="{{ url('tolak/' . $daftar->id_pendaftaran) }}" class="btn btn-danger">Tolak</a>
                             @endif
                         </td>
-                    </tr>
+                    </tr> 
                 @endforeach
             </tbody>
         </table>
