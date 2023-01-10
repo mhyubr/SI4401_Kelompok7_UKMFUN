@@ -7,10 +7,10 @@
                 @if (session()->has('success'))
                     <div class="alert alert-success fs-5 text-center" role="alert" style="margin-top: 200px;">
                         {{ session('success') }}
-                    </div>
+                    </div> 
                 @endif
                 <img class="mt-5" src="{{ asset('asset/img/ukm-fun-black.png') }}" alt="ukm-fun" width="60%">
-            </div>
+            </div> 
         </div>
         <div class="row text-center mt-5 justify-content-center">
             @foreach ($contents as $content)

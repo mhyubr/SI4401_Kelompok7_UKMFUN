@@ -6,9 +6,9 @@
                 <p class="mt-2 ms-5">Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</p>
                 <div class="row">
                     <p class="mt-5 ms-5 text-secondary">© Copyright 2022  |  Telkom University | Powered by UKM Fun</p>
-                </div>
-            </div>
-            <div class="col-sm-3">
+                </div> 
+            </div> 
+            <div class="col-sm-3"> 
                 <p class="text-center mt-4">FOLLOW US</p>
                 <div class="text-center">
                     <a class="mx-2" href="https://www.facebook.com/telkomuniversity/" target="_blank" rel="noopener noreferrer">

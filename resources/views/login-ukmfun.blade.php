@@ -5,19 +5,19 @@
         <div class="ukm-fun row text-center">
             <div class="col">
                 <img src="{{ asset('asset/img/ukm-fun.png') }}" class="my-1" alt="ukm-fun">
-            </div>
+            </div>   
         </div>
         <div class="row justify-content-center mt-5">
-            <div class="card" style="width: 25rem;">
+            <div class="card" style="width: 25rem;"> 
                 <div class="card-body">
                     <h1 class="card-title text-center">Login</h1>
-                    <p class="card-title text-center text-danger">UKM Fun</p>
+                    <p class="card-title text-center text-danger">UKM Fun</p> 
                     @if (session()->has('LoginGagal'))
                         <div class="alert alert-danger" role="alert">
                             {{ session('LoginGagal') }}
-                        </div>
+                        </div> 
                     @endif
-                    <form action="/login" method="POST">
+                    <form action="/login" method="POST"> 
                         @csrf
                         <div class="mt-3 mb-3">
                             <label for="email" class="form-label">Email SSO/UKM</label>

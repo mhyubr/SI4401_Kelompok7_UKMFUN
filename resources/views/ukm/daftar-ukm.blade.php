@@ -3,11 +3,11 @@
 @section('container')
     <div class="container-fluid">
         <br><br><br><br><br>
-        {{-- <h2 class="text-center">Status Pendaftar</h2>
+        {{-- <h2 class="text-center">Status Pendaftar</h2> 
     <div class="row justify-content-center">
-        <div class="col-sm-4">
+        <div class="col-sm-4"> 
             <div class="mt-3">
-                <h5>Jumlah Pendaftar</h5>
+                <h5>Jumlah Pendaftar</h5> 
                 <div class="progress">
                     <div class="progress-bar bg-warning" role="progressbar" aria-label="Info example"
                         style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">100</div>
