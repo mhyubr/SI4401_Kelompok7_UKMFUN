@@ -3,15 +3,15 @@
         <a class="navbar-brand" href="#">
             <img src="{{ asset('asset/img/tel-u.png') }}" class="my-2" alt="tel-u" height="40px">
         </a>
-        <div class="navbar-nav">
+        <div class="navbar-nav"> 
             <ul class="nav justify-content-end">
-                <li class="nav-item mx-2">
+                <li class="nav-item mx-2"> 
                     <a class="nav-link {{ $title === auth()->user()->nama ? 'text-danger' : 'text-dark' }}" href="/home-ukm">{{ auth()->user()->nama }}</a>
                 </li>
-                <li class="nav-item mx-2">
+                <li class="nav-item mx-2"> 
                     <a class="nav-link {{ $title === 'Edit' ? 'text-danger' : 'text-dark' }}" href="/edit">EDIT</a>
                 </li>
-                <li class="nav-item mx-2">
+                <li class="nav-item mx-2"> 
                     <a class="nav-link {{ $title === 'Pendaftaran' ? 'text-danger' : 'text-dark' }}" href="/pendaftaran">PENDAFTARAN</a>
                 </li>
                 {{-- <li class="nav-item mx-2">

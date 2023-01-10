@@ -6,7 +6,7 @@
             @if (isset($error))
                 <div class="alert alert-danger fs-5 text-center" role="alert" style="margin: 350px 100px 400px 100px;">
                     {{ $error }}
-                </div>
+                </div> 
             @else
                 <div class="row">
                     <div class="col-sm-12 text-center mt-5"

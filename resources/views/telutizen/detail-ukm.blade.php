@@ -14,7 +14,7 @@
                     <button type="button" class="btn btn-danger btn-lg my-5" data-bs-toggle="modal"
                         data-bs-target="#pendaftaran" style="width: 15rem;">DAFTAR</button>
                     <br><br>
-                </div>
+                </div> 
             </div>
             <div class="row justify-content-center mt-5 mb-5">
                 <div class="col-sm-6 text-center">

@@ -16,7 +16,7 @@
                 </li> --}}
                 <li class="nav-item mx-2">
                     <a class="nav-link {{ $title === 'About Us' ? 'text-danger' : 'text-dark' }}" href="/about">ABOUT
-                        US</a>
+                        US</a> 
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link text-dark" href="/notifikasi" data-bs-toggle="modal"
