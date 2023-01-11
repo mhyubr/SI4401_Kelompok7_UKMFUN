@@ -49,6 +49,49 @@ class UserSeeder extends Seeder
             'role' => 'mahasiswa',
             'remember_token' =>  Str::random(60)
         ]);
+        
+        DB::table('users')->insert([
+            'nama' => 'MAPEKA',
+            'email' => 'MAPEKA@ukm.Maranatha.edu',
+            'password' => bcrypt('MAPEKA'),
+            'role' => 'ukm',
+            'remember_token' =>  Str::random(60)
+        ]);
+
+        DB::table('users')->insert([
+            'nama' => 'Legal Drafting FH UKM',
+            'email' => 'LD.FH.Maranatha@ukm.Maranatha.edu',
+            'password' => bcrypt('LD-FH-UKM'),
+            'role' => 'ukm',
+            'remember_token' =>  Str::random(60)]);
+            
+        DB::table('users')->insert([
+            'nama' => 'MCU Choir',
+            'email' => 'MCU.Choir@ukm.Maranatha.edu',
+            'password' => bcrypt('MCU Choir'),
+            'role' => 'ukm',
+            'remember_token' =>  Str::random(60)]);
+
+        DB::table('users')->insert([
+            'nama' => 'MCU Photography Club',
+            'email' => 'MCU.Photography@ukm.Maranatha.edu',
+            'password' => bcrypt('MCU Photography'),
+            'role' => 'ukm',
+            'remember_token' =>  Str::random(60)]);
+
+        DB::table('users')->insert([
+            'nama' => 'MCU Diving Club',
+            'email' => 'Diving@ukm.Maranatha.edu',
+            'password' => bcrypt('MCU Diving'),
+            'role' => 'ukm',
+            'remember_token' =>  Str::random(60)]);
+    
+        DB::table('users')->insert([
+                'nama' => 'AIESEC',
+                'email' => 'AIESEC@ukm.Maranatha.edu',
+                'password' => bcrypt('AIESEC'),
+                'role' => 'ukm',
+                'remember_token' =>  Str::random(60)]);
 
         DB::table('users')->insert([
             'nama' => 'Anugrah Bagas',
@@ -60,6 +103,53 @@ class UserSeeder extends Seeder
             'role' => 'mahasiswa',
             'remember_token' =>  Str::random(60)
         ]);
+
+        DB::table('users')->insert([
+            'nama' => 'Yudas Iskariot',
+            'nim' => 1202200000,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Laki - laki',
+            'email' => 'yudas@student.telkomuniversity.ac.id',
+            'password' => bcrypt('yudas'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
+
+        DB::table('users')->insert([
+            'nama' => 'Ponti Pilatus',
+            'nim' => 1202200002,
+            'jurusan' => 'S1 Teknik Nuklir',
+            'jk' => 'Laki - laki',
+            'email' => 'Pilatus@student.telkomuniversity.ac.id',
+            'password' => bcrypt('pilatus'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
+
+        DB::table('users')->insert([
+            'nama' => 'Herodes',
+            'nim' => 1202200012,
+            'jurusan' => 'S1 Teknik Kimia',
+            'jk' => 'Laki - laki',
+            'email' => 'herodes@student.telkomuniversity.ac.id',
+            'password' => bcrypt('herodes'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
+
+        DB::table('users')->insert([
+            'nama' => 'Yakobus',
+            'nim' => 1202200312,
+            'jurusan' => 'S1 Teknik Fisika',
+            'jk' => 'Laki - laki',
+            'email' => 'Yakobus@student.telkomuniversity.ac.id',
+            'password' => bcrypt('yakobus'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
+        
+    
+
 
         DB::table('users')->insert([
             'nama' => 'Nur Afni',
