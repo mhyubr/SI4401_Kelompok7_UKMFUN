@@ -194,7 +194,7 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Thomas',
-            'nim' => 1202253542,
+            'nim' => 1202253543,
             'jurusan' => 'S1 Fakultas Kedokteran',
             'jk' => 'Laki - laki',
             'email' => 'Thomas@student.telkomuniversity.ac.id',
