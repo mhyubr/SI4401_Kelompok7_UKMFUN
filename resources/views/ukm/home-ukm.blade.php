@@ -10,7 +10,7 @@
             @else
                 <div class="row">
                     <div class="col-sm-12 text-center mt-5"
-                        style="height: 821px; background-image: url({{ asset('storage/asset/img/upload/' . $contents->jumbotron) }});">
+                        style="height: 821px; background-image: url({{ asset('storage/asset/img/upload/' . $contents->jumbotron) }}); background-repeat: no-repeat; background-size: cover;">
                         <img src="{{ asset('storage/asset/img/upload/' . $contents->logo) }}" height="300px" alt=""
                             srcset="" style="margin-top: 110px;">
                         <br><br><br><br><br>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="row bg-secondary text-light" style="height: 532px;">
                     <div class="col-sm-4 text-center fs-1 my-auto">
-                        VISI
+                        MISI
                     </div>
                     <div class="col-sm-6 my-auto" style="text-align: justify;">
                         {{ $contents->misi }}

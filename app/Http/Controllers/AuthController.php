@@ -18,7 +18,6 @@ class AuthController extends Controller
 
     public function authenticate(Request $request) 
     {
-        // dd($request->all());
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required'
@@ -27,6 +26,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             if (Auth::user()->role == 'ukm') {
+                dd($request->all());
                 return redirect()->intended('/home-ukm');
             } elseif (Auth::user()->role == 'mahasiswa') {
                 return redirect()->intended('/home');

@@ -23,19 +23,20 @@ class PendaftaranController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_ukm' => 'required|integer',
-            'nama_ukm' => 'required|string',
-            'nama' => 'required|string',
-            'nim' => 'required|integer',
-            'jurusan' => 'required|string',
-            'jk' => 'required|string',
-            'alamat' => 'required|string',
-            'email' => 'required|email',
-            'no_hp' => 'required|integer',
-            'ksm' => 'required|mimes:pdf|max:10000',
-            'khs' => 'required|mimes:pdf|max:10000',
-            'cv' => 'required|mimes:pdf|max:10000'
+            'id_ukm' => 'required',
+            'nama_ukm' => 'required',
+            'nama' => 'required',
+            'nim' => 'required',
+            'jurusan' => 'required',
+            'jk' => 'required',
+            'alamat' => 'required',
+            'email' => 'required',
+            'no_hp' => 'required',
+            'ksm' => 'required|mimes:pdf',
+            'khs' => 'required|mimes:pdf',
+            'cv' => 'required|mimes:pdf'
         ]);
+        // dd($request);
 
         $id_mahasiswa = Auth::user()->id_user;
 

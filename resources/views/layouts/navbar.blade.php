@@ -11,9 +11,9 @@
                 {{-- <li class="nav-item mx-2">
                     <a class="nav-link {{ $title === 'Event' ? 'text-danger' : 'text-dark' }}" href="/event">EVENT</a>
                 </li> --}}
-                {{-- <li class="nav-item mx-2">
-                    <a class="nav-link {{ $title === 'UKM' ? 'text-danger' : 'text-dark' }}" href="/ukm">UKM</a>
-                </li> --}}
+                <li class="nav-item mx-2">
+                    <a class="nav-link {{ $title === 'UKM' ? 'text-danger' : 'text-dark' }}" href="/home">UKM</a>
+                </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link {{ $title === 'About Us' ? 'text-danger' : 'text-dark' }}" href="/about">ABOUT
                         US</a> 

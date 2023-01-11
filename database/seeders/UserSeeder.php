@@ -19,6 +19,9 @@ class UserSeeder extends Seeder
         // TELUTIZEN
         DB::table('users')->insert([
             'nama' => 'Muhammad Ayyub Ramli',
+            'nim' => 1202201296,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Laki - laki',
             'email' => 'ayyub@student.telkomuniversity.ac.id',
             'password' => bcrypt('ayyub'),
             'role' => 'mahasiswa',
@@ -27,6 +30,9 @@ class UserSeeder extends Seeder
         
         DB::table('users')->insert([
             'nama' => 'Ivan Setiawan',
+            'nim' => 1202200173,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Laki - laki',
             'email' => 'ivan@student.telkomuniversity.ac.id',
             'password' => bcrypt('ivan'),
             'role' => 'mahasiswa',
@@ -35,6 +41,9 @@ class UserSeeder extends Seeder
         
         DB::table('users')->insert([
             'nama' => 'Ari Dwi Setyawan',
+            'nim' => 1202200150,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Laki - laki',
             'email' => 'dwi@student.telkomuniversity.ac.id',
             'password' => bcrypt('dwi'),
             'role' => 'mahasiswa',
@@ -43,6 +52,9 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Anugrah Bagas',
+            'nim' => 1202200124,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Laki - laki',
             'email' => 'bagas@student.telkomuniversity.ac.id',
             'password' => bcrypt('bagas'),
             'role' => 'mahasiswa',
@@ -51,6 +63,9 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Nur Afni',
+            'nim' => 1202200177,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Perempuan',
             'email' => 'afni@student.telkomuniversity.ac.id',
             'password' => bcrypt('afni'),
             'role' => 'mahasiswa',
@@ -59,6 +74,9 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Amanda Aurelie',
+            'nim' => 1202201129,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Perempuan',
             'email' => 'manda@student.telkomuniversity.ac.id',
             'password' => bcrypt('manda'),
             'role' => 'mahasiswa',
@@ -66,7 +84,10 @@ class UserSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'nama' => 'Ni putu Diah',
+            'nama' => 'Ni putu Diah Putri Utami',
+            'nim' => 1202200062,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Perempuan',
             'email' => 'diah@student.telkomuniversity.ac.id',
             'password' => bcrypt('diah'),
             'role' => 'mahasiswa',
@@ -75,6 +96,9 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Andi Aswan',
+            'nim' => 1202200062,
+            'jurusan' => 'S1 Sistem Informasi',
+            'jk' => 'Perempuan',
             'email' => 'aswan@student.telkomuniversity.ac.id',
             'password' => bcrypt('aswan'),
             'role' => 'mahasiswa',

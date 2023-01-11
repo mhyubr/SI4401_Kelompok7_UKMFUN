@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id('id_content')->unsigned()->autoIncrement();
             $table->integer('id_ukm');
             $table->string('nama_ukm', 255);
-            $table->string('deskripsi');
-            $table->string('logo', 255)->unique();
+            $table->string('deskripsi', 2000);
+            $table->string('logo', 255);
             $table->string('jumbotron', 255);
-            $table->string('visi');
-            $table->string('misi');
+            $table->string('visi', 2000);
+            $table->string('misi', 2000);
             $table->string('galeri', 255);
             $table->timestamps();
         });

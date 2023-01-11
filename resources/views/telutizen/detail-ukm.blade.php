@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 text-center mt-5"
-                    style="height: 821px; background-image: url({{ asset('storage/asset/img/upload/' . $contents->jumbotron) }});">
+                    style="height: 821px; background-image: url({{ asset('storage/asset/img/upload/' . $contents->jumbotron) }}); background-repeat: no-repeat; background-size: cover;">
                     <img src="{{ asset('storage/asset/img/upload/' . $contents->logo) }}" height="300px" alt=""
                         srcset="" style="margin-top: 110px;">
                     <br><br><br><br><br>
@@ -33,7 +33,7 @@
             </div>
             <div class="row bg-secondary text-light" style="height: 532px;">
                 <div class="col-sm-4 text-center fs-1 my-auto">
-                    VISI
+                    MISI
                 </div>
                 <div class="col-sm-6 my-auto" style="text-align: justify;">
                     {{ $contents->misi }}
@@ -110,7 +110,7 @@
                                 <div class="mb-3">
                                     <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
                                     <input type="text" class="form-control" id="nama_lengkap" name="nama"
-                                        aria-describedby="emailHelp">
+                                        aria-describedby="emailHelp" value="{{ auth()->user()->nama }}" disabled>
                                 </div>
                                 <div class="mb-3">
                                     <label for="nim" class="form-label">NIM</label>
@@ -136,24 +136,24 @@
                                         <option value="S1 Data Sains">S1 Data Sains</option>
                                         <option value="S1 Manajemen Bisnis Telekomunikasi & Informatika (MBTI)">S1
                                             Manajemen Bisnis Telekomunikasi & Informatika (MBTI)</option>
-                                        <option value="">S1 Akuntansi</option>
-                                        <option value="">S1 Administrasi Bisnis</option>
-                                        <option value="">S1 Ilmu Komunikasi</option>
-                                        <option value="">S1 Digital Public Relation</option>
-                                        <option value="">S1 Digital Content Broadcasting</option>
-                                        <option value="">S1 Desain Komunikasi Visual</option>
-                                        <option value="">S1 Product Innovation & Management </option>
-                                        <option value="">S1 Desain Interior</option>
-                                        <option value="">S1 Kriya (Fashion and Textile Design)</option>
-                                        <option value="">S1 Creative Arts (Intermedia Visual Arts)</option>
-                                        <option value="">D3 Teknik Telekomunikasi (Digital Connectivity)</option>
-                                        <option value="">D3 Teknik Informatika</option>
-                                        <option value="">D3 Sistem Informasi</option>
-                                        <option value="">D3 Sistem Informasi Akuntansi </option>
-                                        <option value="">D3 Teknik Komputer</option>
-                                        <option value="">D3 Digital Marketing</option>
-                                        <option value="">D3 Hospitality and Culinary Art</option>
-                                        <option value="">S1 Terapan Digital Creative Multimedia (DCM)</option>
+                                        <option value="S1 Akuntansi">S1 Akuntansi</option>
+                                        <option value="S1 Administrasi Bisnis">S1 Administrasi Bisnis</option>
+                                        <option value="S1 Ilmu Komunikasi">S1 Ilmu Komunikasi</option>
+                                        <option value="S1 Digital Public Relation">S1 Digital Public Relation</option>
+                                        <option value="S1 Digital Content Broadcasting<">S1 Digital Content Broadcasting</option>
+                                        <option value="S1 Desain Komunikasi Visual">S1 Desain Komunikasi Visual</option>
+                                        <option value="S1 Product Innovation & Management">S1 Product Innovation & Management </option>
+                                        <option value="S1 Desain Interior">S1 Desain Interior</option>
+                                        <option value="S1 Kriya (Fashion and Textile Design)">S1 Kriya (Fashion and Textile Design)</option>
+                                        <option value="S1 Creative Arts (Intermedia Visual Arts)">S1 Creative Arts (Intermedia Visual Arts)</option>
+                                        <option value="D3 Teknik Telekomunikasi (Digital Connectivity)">D3 Teknik Telekomunikasi (Digital Connectivity)</option>
+                                        <option value="D3 Teknik Informatika">D3 Teknik Informatika</option>
+                                        <option value="D3 Sistem Informasi">D3 Sistem Informasi</option>
+                                        <option value="D3 Sistem Informasi Akuntansi">D3 Sistem Informasi Akuntansi </option>
+                                        <option value="D3 Teknik Komputer">D3 Teknik Komputer</option>
+                                        <option value="D3 Digital Marketing">D3 Digital Marketing</option>
+                                        <option value="D3 Hospitality and Culinary Art">D3 Hospitality and Culinary Art</option>
+                                        <option value="S1 Terapan Digital Creative Multimedia (DCM)">S1 Terapan Digital Creative Multimedia (DCM)</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
