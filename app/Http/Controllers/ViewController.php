@@ -16,16 +16,25 @@ class ViewController extends Controller
     }
     
     public function ukm() {
+        // $pendaftaran = Pendaftaran::find(Auth::user()->id_user);
+        $pendaftaran = Pendaftaran::where('id_mahasiswa', Auth::user()->id_user)->get();
+        // $ukm = User::find($pendaftaran->id_ukm);
+        // $title = 'About Us';
+        if ($pendaftaran == null) {
+            $pendaftaran = [];
+        }
+        // dd($pe
         return view('telutizen.ukm', [
-            'title' => 'UKM'
+            'title' => 'UKM',
+            'pendaftaran' => $pendaftaran
         ]);
     }
     
-    public function event() {
-        return view('telutizen.event', [
-            'title' => 'Event'
-        ]);
-    }
+    // public function event() {
+    //     return view('telutizen.event', [
+    //         'title' => 'Event'
+    //     ]);
+    // }
     
     public function about() {
         // $pendaftaran = Pendaftaran::find(Auth::user()->id_user);

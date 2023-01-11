@@ -110,17 +110,27 @@
                                 <div class="mb-3">
                                     <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
                                     <input type="text" class="form-control" id="nama_lengkap" name="nama"
-                                        aria-describedby="emailHelp" value="{{ auth()->user()->nama }}" disabled>
+                                        aria-describedby="emailHelp" value="{{ auth()->user()->nama }}" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="nim" class="form-label">NIM</label>
-                                    <input type="number" class="form-control" id="nim" name="nim">
+                                    <input type="number" class="form-control" id="nim" name="nim" value="{{ auth()->user()->nim }}" required>
                                 </div>
+                                {{-- backup input --}}
+                                {{-- <div class="mb-3">
+                                    <label for="jurusan" class="form-label">Jurusan</label>
+                                    <input type="text" class="form-control" id="jurusan" name="jurusan" value="{{ auth()->user()->jurusan }}" disabled required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="jk" class="form-label">NIM</label>
+                                    <input type="text" class="form-control" id="jk" name="jk" value="{{ auth()->user()->jk }}" disabled required>
+                                </div> --}}
+                                {{-- backup input --}}
                                 <div class="mb-3">
                                     <label for="jurusan" class="form-label">Jurusan</label>
                                     <select class="form-select" aria-label="Default select example" id="jurusan"
-                                        name="jurusan">
-                                        <option value="" selected>Pilih Jurusan</option>
+                                        name="jurusan" required>
+                                        <option value="{{ auth()->user()->jurusan }}" selected>{{ auth()->user()->jurusan }}</option>
                                         <option value="S1 Teknik Telekomunikasi">S1 Teknik Telekomunikasi</option>
                                         <option value="S1 Teknik Elektro">S1 Teknik Elektro</option>
                                         <option value="S1 Smart Science and Technology">S1 Smart Science and Technology
@@ -159,8 +169,8 @@
                                 <div class="mb-3">
                                     <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                                     <select class="form-select" aria-label="Default select example" id="jenis_kelamin"
-                                        name="jk">
-                                        <option value="" selected>Pilih Jenis Kelamin</option>
+                                        name="jk" required>
+                                        <option value="{{ auth()->user()->jk }}" selected>{{ auth()->user()->jk }}</option>
                                         <option value="Laki - laki">Laki - laki</option>
                                         <option value="Perempuan">Perempuan</option>
                                     </select>
@@ -168,22 +178,22 @@
                                 <div class="mb-3">
                                     <label for="alamat" class="form-label">Alamat Lengkap</label>
                                     <input type="text" class="form-control" id="alamat" name="alamat"
-                                        aria-describedby="emailHelp">
+                                        aria-describedby="emailHelp" required>
                                 </div>
                             </div>
                             <div class="col-sm-5 mt-5">
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email address</label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                        aria-describedby="emailHelp">
+                                        aria-describedby="emailHelp" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="no_hp" class="form-label">No. HP</label>
-                                    <input type="number" class="form-control" id="no_hp" name="no_hp">
+                                    <input type="number" class="form-control" id="no_hp" name="no_hp" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="ksm" class="form-label">KSM</label>
-                                    <input class="form-control" type="file" id="ksm" name="ksm">
+                                    <input class="form-control" type="file" id="ksm" name="ksm" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="khs" class="form-label">KHS</label>
@@ -191,7 +201,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="cv" class="form-label">CV</label>
-                                    <input class="form-control" type="file" id="cv" name="cv">
+                                    <input class="form-control" type="file" id="cv" name="cv" required>
                                 </div>
                             </div>
                         </div>

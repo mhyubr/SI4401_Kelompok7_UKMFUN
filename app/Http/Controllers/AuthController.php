@@ -22,11 +22,11 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
+        // dd($request->all());
         
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             if (Auth::user()->role == 'ukm') {
-                dd($request->all());
                 return redirect()->intended('/home-ukm');
             } elseif (Auth::user()->role == 'mahasiswa') {
                 return redirect()->intended('/home');

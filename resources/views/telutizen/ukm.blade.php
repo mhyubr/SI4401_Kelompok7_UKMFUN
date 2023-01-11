@@ -2,28 +2,43 @@
 
 @section('container')
     <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-sm-5 mt-5">
-                <form class="d-flex mt-5" role="search">
-                    <input class="form-control me-2" type="search" placeholder="UKM name or keywords..." aria-label="Search">
-                    <button class="btn btn-danger" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-        {{-- card --}}
-        <div class="row text-center mt-5 justify-content-center">
-            <div class="col-sm-4 mt-5">
-                <div class="card mx-auto" style="width: 18rem; height: 30rem;">
-                    <img src="{{ asset('asset/img/astacala.png') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">ASTACALA</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="ukm-astacala.html" class="btn btn-danger">Lihat UKM</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{-- card --}}
+        <br><br><br><br><br><br>
+        <h2 class="text-center">List UKM</h2>
+        <br>
+        {{-- table --}}
+        <table class="table table-striped table-hover mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">ID Pendaftaran</th>
+                    <th scope="col">ID UKM</th>
+                    <th scope="col">Nama UKM</th>
+                    <th scope="col">Status Pendaftaran</th>
+                    <th scope="col">Tanggal Pengumuman</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                @foreach ($pendaftaran as $daftar)
+                    <tr>
+                        <th scope="row">{{ $daftar->id_pendaftaran }}</th>
+                        <th scope="row">{{ $daftar->id_ukm }}</th>
+                        <td scope="row">{{ $daftar->nama_ukm }}</th>
+                            <td class="text-success">
+                                @if ($daftar->status == 'Terima')
+                                Diterima
+                                @elseif ($daftar->status == 'Tolak')
+                                <span class="text-danger">DiTolak</span>
+                                @else
+                                <span class="text-primary">Belum dikonfirmasi</span>
+                                @endif
+                            </td>
+                            <td scope="row">{{ $daftar->updated_at }}</th>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <br><br><br><br>
+        <br><br><br><br>
+        <br><br>
+        {{-- table --}}
     </div>
 @endsection
