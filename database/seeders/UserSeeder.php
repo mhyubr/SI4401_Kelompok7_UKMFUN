@@ -172,7 +172,7 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Bartomoleus',
-            'nim' => 12022530312,
+            'nim' => 1202253031,
             'jurusan' => 'S1 Teknik Logistik',
             'jk' => 'Laki - laki',
             'email' => 'Bartomoleus@student.telkomuniversity.ac.id',
@@ -183,7 +183,7 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Filipus',
-            'nim' => 12022530412,
+            'nim' => 1202253041,
             'jurusan' => 'S1 Fakultas Hukum',
             'jk' => 'Laki - laki',
             'email' => 'Filipus@student.telkomuniversity.ac.id',
@@ -194,7 +194,7 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'nama' => 'Thomas',
-            'nim' => 12022535412,
+            'nim' => 1202253542,
             'jurusan' => 'S1 Fakultas Kedokteran',
             'jk' => 'Laki - laki',
             'email' => 'Thomas@student.telkomuniversity.ac.id',
