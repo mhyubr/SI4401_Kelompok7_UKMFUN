@@ -148,8 +148,60 @@ class UserSeeder extends Seeder
             'remember_token' =>  Str::random(60)
         ]);
         
-    
+        DB::table('users')->insert([
+            'nama' => 'Simon',
+            'nim' => 1202201312,
+            'jurusan' => 'S1 Teknik Geofisika',
+            'jk' => 'Laki - laki',
+            'email' => 'Simon@student.telkomuniversity.ac.id',
+            'password' => bcrypt('simon'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
 
+        DB::table('users')->insert([
+            'nama' => 'Maria',
+            'nim' => 1202260312,
+            'jurusan' => 'S1 Teknik Fisika',
+            'jk' => 'Perempuan',
+            'email' => 'Maria@student.telkomuniversity.ac.id',
+            'password' => bcrypt('maria'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
+
+        DB::table('users')->insert([
+            'nama' => 'Bartomoleus',
+            'nim' => 12022530312,
+            'jurusan' => 'S1 Teknik Logistik',
+            'jk' => 'Laki - laki',
+            'email' => 'Bartomoleus@student.telkomuniversity.ac.id',
+            'password' => bcrypt('bartomoleus'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
+
+        DB::table('users')->insert([
+            'nama' => 'Filipus',
+            'nim' => 12022530412,
+            'jurusan' => 'S1 Fakultas Hukum',
+            'jk' => 'Laki - laki',
+            'email' => 'Filipus@student.telkomuniversity.ac.id',
+            'password' => bcrypt('Filipus'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
+
+        DB::table('users')->insert([
+            'nama' => 'Thomas',
+            'nim' => 12022535412,
+            'jurusan' => 'S1 Fakultas Kedokteran',
+            'jk' => 'Laki - laki',
+            'email' => 'Thomas@student.telkomuniversity.ac.id',
+            'password' => bcrypt('thomas'),
+            'role' => 'mahasiswa',
+            'remember_token' =>  Str::random(60)
+        ]);
 
         DB::table('users')->insert([
             'nama' => 'Nur Afni',
